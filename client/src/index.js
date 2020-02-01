@@ -17,13 +17,6 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-// const ui = new firebaseui.auth.AuthUI(firebase.auth());
-// ui.start('#root', {
-//   signInOptions: [
-//     firebase.auth.EmailAuthProvider.PROVIDER_ID,
-//     firebase.auth.GoogleAuthProvider.PROVIDER_ID
-//   ]
-// });
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
