@@ -8,7 +8,9 @@ module.exports = {
   saveUserAddress: async (userId, address) => {
     const existingAddress = await queries.getAddress(userId);
     if (existingAddress) {
-      return queries.updateAddress(userId, address);
+      const addressResult = queries.updateAddress(userId, address);
+      // TODO: kick off subscriber update
+      return addressResult;
     }
 
     return queries.createAddress(userId, address);
