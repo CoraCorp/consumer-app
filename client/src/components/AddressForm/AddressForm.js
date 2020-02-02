@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { saveAddress } from '../../services/addressService';
 import styles from './AddressForm.module.css';
 
-const AddressForm = () => {
+const AddressForm = ({ address }) => {
   const formRef = useRef();
   function handleSubmit(e) {
     e.preventDefault();
@@ -19,27 +19,27 @@ const AddressForm = () => {
     <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
       <label>
         Name
-        <input name="name" />
+        <input name="name" defaultValue={address.name} />
       </label>
       <label>
         Street
-        <input name="street" />
+        <input name="street" defaultValue={address.street} />
       </label>
       <label>
         Appartment/Suite/Room
-        <input name="apt" />
+        <input name="apt" defaultValue={address.apt} />
       </label>
       <label>
         City
-        <input name="city" />
+        <input name="city" defaultValue={address.city} />
       </label>
       <label>
         State
-        <input name="state" />
+        <input name="state" defaultValue={address.state} />
       </label>
       <label>
         Zip
-        <input name="zip" />
+        <input name="zip" defaultValue={address.zip} />
       </label>
       <button type="submit">Save</button>
     </form>

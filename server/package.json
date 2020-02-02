@@ -5,15 +5,25 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./index.js",
+    "db-migrate": "node ./node_modules/db-migrate/bin/db-migrate",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es2020": true
+    }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "db-migrate": "^0.11.6",
+    "db-migrate-pg": "^1.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "firebase-admin": "^8.9.2",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.1"
   }
 }
